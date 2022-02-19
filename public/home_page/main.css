@@ -97,7 +97,7 @@ body {
 /* Boostrap custom css */
 
 .navbar-nav a.nav-link.active {
-    color: #FE3494 !important;
+    color: #d6747e !important;
 }
 
 .nav-pills .nav-link.active {
@@ -106,8 +106,8 @@ body {
 }
 
 /* .navbar-nav .nav-item .nav-link.active {
-    color: #FE3494;;
-    border-bottom: 2px solid #FE3494;
+    color: #d6747e;;
+    border-bottom: 2px solid #d6747e;
 }
 
 .navbar-nav .nav-item:hover .nav-link {
@@ -115,15 +115,15 @@ body {
 }  */
 
 .text-gold {
-    color: #FFE234;
+    color: #B52B40;
 }
 
 .text-primary {
-    color: #FE3494 !important;
+    color: #d6747e !important;
 }
 
 .text-secondary {
-    color: #7E4196 !important;
+    color: #063970 !important;
 }
 
 .rounded-circle {
@@ -133,25 +133,25 @@ body {
 }
 
 .btn-primary {
-    background-color: #FE3494 !important;
+    background-color: #d6747e !important;
     border: 0;
 }
 
 .btn-primary:hover {
-    background-color: #e4016f !important;
-    /* #7E4196 */
+    background-color: #B52B40 !important;
+    /* #B52B40 */
 }
 
 .btn-secondary {
-    background-color: #7E4196 !important;
+    background-color: #063970 !important;
 }
 
 .btn-secondary:hover {
-    background-color: #4B275A !important;
+    background-color:#050e6b !important;
 }
 
 .btn-light:hover {
-    background-color: #FE3494 !important;
+    background-color: #d6747e !important;
     color: #fff !important;
 }
 
@@ -164,26 +164,26 @@ body {
 }
 
 .btn-outline-light:hover {
-    background-color: #FE3494 !important;
+    background-color: #d6747e !important;
     color: #fff;
 }
 
 .link-primary {
-    color: #FE3494 !important;
+    color:#d6747e  !important;
 }
 
 .link-primary:hover {
-    color: #D92089 !important;
+    color: #B52B40 !important;
 }
 
 .link-light:hover {
-    color: #7E4196 !important;
+    color: #063970 !important;
 }
 
 .link-secondary:hover,
 .cb-icon:hover {
-    color: #D92089 !important;
-    fill: #D92089;
+    color: #B52B40 !important;
+    fill: #B52B40;
 }
 
 /* Pagination */
@@ -195,13 +195,13 @@ body {
 
 .pagination li a:focus,
 .pagination li a:hover {
-    color: #FE3494;
+    color: #d6747e;
     background-color: #fff;
     border-color: #ddd;
 }
 
 .pagination .active a {
-    background-color: #FE3494 !important;
+    background-color: #d6747e !important;
     border-color: #ddd !important;
 }
 
@@ -242,7 +242,7 @@ body {
 }
 
 .custom-section {
-    background-image: url('asset/img/shape-angle.svg');
+    background-image: url('');
     background-repeat: no-repeat;
     background-size: cover;
     overflow: hidden;
@@ -277,7 +277,7 @@ body {
 
 .custom-ul li::before {
     content: "\2022";
-    color: #FE3494;
+    color: #d6747e;
     font-weight: bold;
     display: inline-block;
     width: 1.5em;
@@ -292,19 +292,19 @@ body {
 }
 
 .slick-dots li.slick-active button:before {
-    color: #FE3494 !important;
+    color: #d6747e !important;
 }
 
 .slick-dots li:hover button:before {
-    color: #FE3494 !important;
+    color: #B52B40 !important;
 }
 
 .slick-prev:before {
-    color: #FE3494;
+    color: #d6747e;
 }
 
 .slick-next:before {
-    color: #FE3494;
+    color: #d6747e;
 }
 
 .slide {
@@ -327,7 +327,7 @@ body {
 /* Store home */
 
 .bg-gradiant-primary {
-    background: linear-gradient(0deg, rgba(254, 52, 148, 1) 0%, rgba(126, 65, 150, 1) 100%);
+    background: linear-gradient(0deg, rgba(214, 116, 126, 1) 0%, rgba(6, 57, 112, 1) 100%);
 }
 
 .text-blue {
@@ -350,7 +350,7 @@ body {
 .product-card-item .corner-angle {
     width: 0;
     height: 0;
-    border-top: 45px solid #FE3494;
+    border-top: 45px solid #d6747e;
     border-bottom: 45px solid transparent;
     border-left: 45px solid transparent;
     position: absolute;
@@ -447,8 +447,8 @@ body {
 /* appearance for checked radiobutton */
 
 .custom-input-radio[type="radio"]:checked {
-    background-color: #FE3494;
-    border: 1px solid #FE3494;
+    background-color: #d6747e;
+    border: 1px solid #d6747e;
 }
 
 .custom-input-checkbox[type="checkbox"] {
@@ -468,8 +468,8 @@ body {
 /* appearance for checked radiobutton */
 
 .custom-input-checkbox[type="checkbox"]:checked {
-    background-color: #FE3494;
-    border: 1px solid #FE3494;
+    background-color: #d6747e;
+    border: 1px solid #d6747e;
 }
 
 /* Store checkout payment */
@@ -481,13 +481,13 @@ body {
 }
 
 .custom-btn-outline-primary:hover {
-    color: #FE3494;
-    border-color: #FE3494 !important;
-    /* fill: #FE3494 !important; */
+    color: #d6747e;
+    border-color: #d6747e !important;
+    /* fill: #d6747e !important; */
 }
 
 .custom-btn-outline-primary:hover path {
-    fill: #FE3494 !important;
+    fill: #d6747e !important;
 }
 
 .btn-check:active+.custom-btn-outline-primary,
@@ -497,7 +497,7 @@ body {
 .custom-btn-outline-primary.dropdown-toggle.show {
     color: #fff !important;
     fill: #fff !important;
-    background-color: #FE3494 !important;
+    background-color: #d6747e !important;
     border-color: transparent !important;
 }
 

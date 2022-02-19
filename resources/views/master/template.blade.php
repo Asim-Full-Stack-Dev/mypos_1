@@ -6,12 +6,15 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Ela Admin - HTML5 Admin Template</title>
+    <title>POS Dashboard</title>
     <meta name="description" content="Ela Admin - HTML5 Admin Template">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="apple-touch-icon" href="https://i.imgur.com/QRAUqs9.png">
-    <link rel="shortcut icon" href="https://i.imgur.com/QRAUqs9.png">
+{{--    <link rel="shortcut icon" href="https://i.imgur.com/QRAUqs9.png">--}}
+
+    {{--favicon--}}
+    <link href="{{ asset('/home_page/asset/img/pos-logo-icon.png') }}" rel="icon" type="image/png" sizes="16x16">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.0/normalize.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css">
@@ -80,10 +83,10 @@
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-th"></i>Purchase</a>
                         <ul class="sub-menu children dropdown-menu">                            <li><i class="fa fa-puzzle-piece"></i><a href="{{route('add_purchase')}}">add purchase</a></li>
                             <li><i class="fa fa-id-badge"></i><a href="{{route('purchase_list')}}">Purchase List</a></li>
-                            
+
                         </ul>
-                    </li>   
-               
+                    </li>
+
                     <li class="menu-item-has-children dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-bar-chart"></i>Stock</a>
                         <ul class="sub-menu children dropdown-menu">
@@ -91,12 +94,12 @@
                             <li><i class="fa fa-table"></i><a href="{{route('stock_list')}}">Stock List</a></li>
                         </ul>
                     </li>
-                    
+
                     <li class="menu-item-has-children dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-tasks"></i>Sales</a>
                         <ul class="sub-menu children dropdown-menu">
                             <li><i class="menu-icon fa fa-th"></i><a href="{{route('add_sale')}}">Add Sales</a></li>
-                           
+
                             <li><i class="menu-icon fa fa-th"></i><a href="{{route('sale_list')}}">Sales List</a></li>
                         </ul>
                     </li>
@@ -105,14 +108,14 @@
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-tasks"></i>POS</a>
                         <ul class="sub-menu children dropdown-menu">
                             <li><i class="menu-icon fa fa-th"></i><a href="{{route('dashboard')}}">Coming Soon</a></li>
-                           
+
                         </ul>
                     </li>
                     <li class="menu-item-has-children dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-tasks"></i>Inventory</a>
                         <ul class="sub-menu children dropdown-menu">
                             <li><i class="menu-icon fa fa-th"></i><a href="{{route('dashboard')}}">Coming Soon</a></li>
-                           
+
                         </ul>
                     </li>
 
@@ -120,7 +123,7 @@
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-tasks"></i>Store</a>
                         <ul class="sub-menu children dropdown-menu">
                             <li><i class="menu-icon fa fa-th"></i><a href="{{route('dashboard')}}">Coming Soon</a></li>
-                           
+
                         </ul>
                     </li>
 
@@ -137,7 +140,7 @@
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-tasks"></i>Reports</a>
                         <ul class="sub-menu children dropdown-menu">
                             <li><i class="menu-icon fa fa-th"></i><a href="{{route('dashboard')}}">Coming Soon</a></li>
-                           
+
                         </ul>
                     </li>
 
@@ -145,7 +148,7 @@
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-tasks"></i>Works Offline</a>
                         <ul class="sub-menu children dropdown-menu">
                             <li><i class="menu-icon fa fa-th"></i><a href="{{route('dashboard')}}">Coming Soon</a></li>
-                           
+
                         </ul>
                     </li>
 
@@ -153,7 +156,7 @@
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-tasks"></i>Records</a>
                         <ul class="sub-menu children dropdown-menu">
                             <li><i class="menu-icon fa fa-th"></i><a href="{{route('dashboard')}}">Coming Soon</a></li>
-                           
+
                         </ul>
                     </li>
 
@@ -161,7 +164,7 @@
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-tasks"></i>Device Compatibility</a>
                         <ul class="sub-menu children dropdown-menu">
                             <li><i class="menu-icon fa fa-th"></i><a href="{{route('dashboard')}}">Coming Soon</a></li>
-                           
+
                         </ul>
                     </li>
 
@@ -169,13 +172,13 @@
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-tasks"></i>Digital Ledger</a>
                         <ul class="sub-menu children dropdown-menu">
                             <li><i class="menu-icon fa fa-th"></i><a href="{{route('dashboard')}}">Coming Soon</a></li>
-                           
+
                         </ul>
                     </li>
-                    
-                  
 
-                   
+
+
+
                 </ul>
             </div><!-- /.navbar-collapse -->
         </nav>
@@ -187,18 +190,18 @@
         <header id="header" class="header">
             <div class="top-left">
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="./"><img src="{{asset('images/logo.png')}}" alt="Logo"></a>
-                    <a class="navbar-brand hidden" href="./"><img src="{{asset('images/logo2.png')}}" alt="Logo"></a>
+                    <a class="navbar-brand mr-0 pr-0" href="./"><img class="w-50" src="{{asset('/home_page/asset/img/pos-logo-hr.png')}}" alt="Logo"></a>
+                    <a class="navbar-brand hidden" href="./"><img src="{{asset('/home_page/asset/img/pos-logo-hr.png')}}" alt="Logo"></a>
                     <a id="menuToggle" class="menutoggle"><i class="fa fa-bars"></i></a>
                 </div>
             </div>
             <div class="top-right">
                 <div class="header-menu">
-                    
+
 
                     <div class="user-area dropdown float-right">
                         <a href="#" class="dropdown-toggle active" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <img class="user-avatar rounded-circle" src="{{asset('images/admin.jpg')}}" alt="User Avatar">
+                            <img class="user-avatar rounded-circle" src="{{asset('images/user-avatar.png')}}" alt="User Avatar">
                         </a>
 
                         <div class="user-menu dropdown-menu">
@@ -217,7 +220,7 @@
         </header>
         <!-- /#header -->
         <!-- Content -->
-        
+
         <div class="content">
             <!-- Animated -->
             <div class="animated fadeIn">
@@ -269,7 +272,7 @@
                                     <div class="stat-content">
                                         <div class="text-left dib">
                                             <div class="stat-text"><span class="count">349</span></div>
-                                            <div class="stat-heading">Templates</div>
+                                            <div class="stat-heading">Expenses</div>
                                         </div>
                                     </div>
                                 </div>
@@ -287,7 +290,7 @@
                                     <div class="stat-content">
                                         <div class="text-left dib">
                                             <div class="stat-text"><span class="count">2986</span></div>
-                                            <div class="stat-heading">Clients</div>
+                                            <div class="stat-heading">Customers</div>
                                         </div>
                                     </div>
                                 </div>
@@ -298,9 +301,9 @@
                 <!-- /Widgets -->
                 <!--  Traffic  -->
                 <div class="container">
-                
+
                 @yield('content')
-                  
+
                 </div>
                 <!-- Modal - Calendar - Add New Event -->
                 <div class="modal fade none-border" id="event-modal">
@@ -360,8 +363,8 @@
             </div>
             <!-- .animated -->
         </div>
-        
-        
+
+
     <!-- /#right-panel -->
 
     <!-- Scripts -->
