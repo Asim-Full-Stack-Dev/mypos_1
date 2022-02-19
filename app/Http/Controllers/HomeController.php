@@ -30,6 +30,8 @@ class HomeController extends Controller
 
     public function add_store()
     {
+        //add condition if store already exist
+
         return view('home');
     }
     public function create()
@@ -54,6 +56,8 @@ class HomeController extends Controller
         $stores->save();
 
         return redirect()->with('status','Store Added Succesfully');
+
+//        return redirect()->route('dashboard');
     }
 
      public function dashboard()
@@ -82,5 +86,5 @@ class HomeController extends Controller
     //     return view('home3');
     // }
 
-   
+
 }

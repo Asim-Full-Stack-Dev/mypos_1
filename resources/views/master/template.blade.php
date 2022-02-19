@@ -1,8 +1,8 @@
 <!doctype html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="{{ str_replace('_', '-', app()->getLocale()) }}"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang="{{ str_replace('_', '-', app()->getLocale()) }}"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang="{{ str_replace('_', '-', app()->getLocale()) }}"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="{{ str_replace('_', '-', app()->getLocale()) }}"> <!--<![endif]-->
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,7 +14,7 @@
 {{--    <link rel="shortcut icon" href="https://i.imgur.com/QRAUqs9.png">--}}
 
     {{--favicon--}}
-    <link href="{{ asset('/home_page/asset/img/pos-logo-icon.png') }}" rel="icon" type="image/png" sizes="16x16">
+    <link href="{{ asset('/home_page/asset/images/pos-logo-icon.png') }}" rel="icon" type="image/png" sizes="16x16">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.0/normalize.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css">
@@ -190,8 +190,8 @@
         <header id="header" class="header">
             <div class="top-left">
                 <div class="navbar-header">
-                    <a class="navbar-brand mr-0 pr-0" href="./"><img class="w-50" src="{{asset('/home_page/asset/img/pos-logo-hr.png')}}" alt="Logo"></a>
-                    <a class="navbar-brand hidden" href="./"><img src="{{asset('/home_page/asset/img/pos-logo-hr.png')}}" alt="Logo"></a>
+                    <a class="navbar-brand mr-0 pr-0" href="./"><img class="w-50" src="{{asset('/home_page/asset/images/pos-logo-hr.png')}}" alt="Logo"></a>
+                    <a class="navbar-brand hidden" href="./"><img src="{{asset('/home_page/asset/images/pos-logo-hr.png')}}" alt="Logo"></a>
                     <a id="menuToggle" class="menutoggle"><i class="fa fa-bars"></i></a>
                 </div>
             </div>

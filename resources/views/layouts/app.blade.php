@@ -14,7 +14,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
     {{--favicon--}}
-    <link href="{{ asset('/home_page/asset/img/pos-logo-icon.png') }}" rel="icon" type="image/png" sizes="16x16">
+    <link href="{{ asset('/home_page/asset/images/pos-logo-icon.png') }}" rel="icon" type="image/png" sizes="16x16">
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -58,7 +58,7 @@ a:hover {
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
             <a class="navbar-brand" href="#">
-      <img src="{{ asset('/home_page/asset/img/pos-logo-hr.png') }}" alt="" class="w-25">
+      <img src="{{ asset('/home_page/asset/images/pos-logo-hr.png') }}" alt="" class="w-25">
     </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>

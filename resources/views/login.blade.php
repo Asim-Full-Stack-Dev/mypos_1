@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- Coding by CodingLab | www.codinglabweb.com-->
-<html lang="en" dir="ltr">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <!--<title> Login and Registration Form in HTML & CSS | CodingLab </title>-->
@@ -8,7 +8,7 @@
 
     <title>POS</title>
     {{--favicon--}}
-    <link href="{{ asset('/home_page/asset/img/pos-logo-icon.png') }}" rel="icon" type="image/png" sizes="16x16">
+    <link href="{{ asset('/home_page/asset/images/pos-logo-icon.png') }}" rel="icon" type="image/png" sizes="16x16">
 
     <!-- Fontawesome CDN Link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
@@ -46,7 +46,9 @@
                         <div class="input-boxes">
                             <div class="input-box">
                                 <i class="fas fa-envelope"></i>
-                                <input type="email" placeholder="Enter your email" required class="form-control @error('email') is-invalid @enderror" name="email"  value="{{ old('email') }}" required autocomplete="email" autofocus>
+                                <input type="email" placeholder="Enter your email" required
+                                       class="form-control @error('email') is-invalid @enderror" name="email"
+                                       value="{{ old('email') }}" required autocomplete="email" autofocus>
                                 @error('email')
                                 <span class="invalid-feedback" role="alert">
                     <strong>{{ $message }}</strong>
@@ -57,7 +59,9 @@
 
                             <div class="input-box">
                                 <i class="fas fa-lock"></i>
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
+                                <input id="password" type="password"
+                                       class="form-control @error('password') is-invalid @enderror" name="password"
+                                       required autocomplete="current-password">
 
                                 @error('password')
                                 <span class="invalid-feedback" role="alert">
@@ -87,7 +91,6 @@
                 </div> -->
 
 
-
                             <div class="button input-box">
                                 <input type="submit" value="Submit">
                             </div>
@@ -99,8 +102,8 @@
             </div>
 
         </div>
-
         <div class="text sign-up-text">Don't have an account? <label for="flip">Register now</label></div>
+        <div class="text sign-up-text mt-5">Go back to <label><a href="{{'/'}}">Home</a></label></div>
     </div>
 
 
@@ -111,7 +114,9 @@
             <div class="input-boxes">
                 <div class="input-box">
                     <i class="fas fa-user"></i>
-                    <input type="text" placeholder="Enter your name" required class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
+                    <input type="text" placeholder="Enter your name" required
+                           class="form-control @error('name') is-invalid @enderror" name="name"
+                           value="{{ old('name') }}" required autocomplete="name" autofocus>
                     @error('name')
                     <span class="invalid-feedback" role="alert">
                     <strong>{{ $message }}</strong>
@@ -121,7 +126,9 @@
 
                 <div class="input-box">
                     <i class="fas fa-envelope"></i>
-                    <input id="email" type="email" placeholder="Enter your email" required class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
+                    <input id="email" type="email" placeholder="Enter your email" required
+                           class="form-control @error('email') is-invalid @enderror" name="email"
+                           value="{{ old('email') }}" required autocomplete="email">
                     @error('email')
                     <span class="invalid-feedback" role="alert">
                 <strong>{{ $message }}</strong>
@@ -131,7 +138,9 @@
 
                 <div class="input-box">
                     <i class="fas fa-lock"></i>
-                    <input id="password" type="password" placeholder="Enter your password" required class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
+                    <input id="password" type="password" placeholder="Enter your password" required
+                           class="form-control @error('password') is-invalid @enderror" name="password" required
+                           autocomplete="new-password">
                     @error('password')
                     <span class="invalid-feedback" role="alert">
                 <strong>{{ $message }}</strong>
@@ -141,7 +150,8 @@
 
                 <div class="input-box">
                     <i class="fas fa-lock"></i>
-                    <input id="password-confirm" type="password" placeholder="Confirm password" required class="form-control" name="password_confirmation" required autocomplete="new-password">
+                    <input id="password-confirm" type="password" placeholder="Confirm password" required
+                           class="form-control" name="password_confirmation" required autocomplete="new-password">
                 </div>
 
                 <div class="button input-box">
@@ -149,6 +159,7 @@
                     {{ __('Register') }}
                 </div>
                 <div class="text sign-up-text">Already have an account? <label for="flip">Login now</label></div>
+                <div class="text sign-up-text mt-5">Go back to <label><a href="{{'/'}}">Home</a></label></div>
             </div>
         </form>
     </div>
@@ -161,30 +172,38 @@
 <style>
     /* Google Font Link */
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
-    *{
+
+    * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-        font-family: "Poppins" , sans-serif;
+        font-family: "Poppins", sans-serif;
     }
-    body{
+
+    body {
         min-height: 100vh;
         display: flex;
         align-items: center;
         justify-content: center;
-        background: #063970;
+        background: url(http://127.0.0.1:8000/home_page/asset/images/main_bg.png);
         padding: 30px;
+        background-size: cover;
+        background-position: center center;
+        margin-bottom: 335px;
+        padding-top: 114px;
     }
-    .container{
+
+    .container {
         position: relative;
         max-width: 850px;
         width: 100%;
         background: #fff;
         padding: 40px 30px;
-        box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
         perspective: 2700px;
     }
-    .container .cover{
+
+    .container .cover {
         position: absolute;
         top: 0;
         left: 50%;
@@ -195,44 +214,51 @@
         transform-origin: left;
         transform-style: preserve-3d;
     }
-    .container #flip:checked ~ .cover{
+
+    .container #flip:checked ~ .cover {
         transform: rotateY(-180deg);
     }
+
     .container .cover .front,
-    .container .cover .back{
+    .container .cover .back {
         position: absolute;
         top: 0;
         left: 0;
         height: 100%;
         width: 100%;
     }
-    .cover .back{
+
+    .cover .back {
         transform: rotateY(180deg);
         backface-visibility: hidden;
     }
+
     .container .cover::before,
-    .container .cover::after{
+    .container .cover::after {
         content: '';
         position: absolute;
         height: 100%;
         width: 100%;
-        background:#063970 ;
+        background: #d02f47;
         opacity: 0.5;
         z-index: 12;
     }
-    .container .cover::after{
+
+    .container .cover::after {
         opacity: 0.3;
         transform: rotateY(180deg);
         backface-visibility: hidden;
     }
-    .container .cover img{
+
+    .container .cover img {
         position: absolute;
         height: 100%;
         width: 100%;
         object-fit: cover;
         z-index: 10;
     }
-    .container .cover .text{
+
+    .container .cover .text {
         position: absolute;
         z-index: 130;
         height: 100%;
@@ -242,53 +268,63 @@
         align-items: center;
         justify-content: center;
     }
+
     .cover .text .text-1,
-    .cover .text .text-2{
+    .cover .text .text-2 {
         font-size: 26px;
         font-weight: 600;
         color: #fff;
         text-align: center;
     }
-    .cover .text .text-2{
+
+    .cover .text .text-2 {
         font-size: 15px;
         font-weight: 500;
     }
-    .container .forms{
+
+    .container .forms {
         height: 100%;
         width: 100%;
         background: #fff;
     }
-    .container .form-content{
+
+    .container .form-content {
         display: flex;
         align-items: center;
         justify-content: space-between;
     }
+
     .form-content .login-form,
-    .form-content .signup-form{
+    .form-content .signup-form {
         width: calc(100% / 2 - 25px);
     }
-    .forms .form-content .title{
+
+    .forms .form-content .title {
         position: relative;
         font-size: 24px;
         font-weight: 500;
         color: #333;
     }
-    .forms .form-content .title:before{
+
+    .forms .form-content .title:before {
         content: '';
         position: absolute;
         left: 0;
         bottom: 0;
         height: 3px;
         width: 25px;
-        background: #063970;
+        background: #d02f47;
     }
-    .forms .signup-form  .title:before{
+
+    .forms .signup-form .title:before {
         width: 20px;
     }
-    .forms .form-content .input-boxes{
+
+    .forms .form-content .input-boxes {
         margin-top: 30px;
     }
-    .forms .form-content .input-box{
+
+    .forms .form-content .input-box {
         display: flex;
         align-items: center;
         height: 50px;
@@ -296,7 +332,8 @@
         margin: 10px 0;
         position: relative;
     }
-    .form-content .input-box input{
+
+    .form-content .input-box input {
         height: 100%;
         width: 100%;
         outline: none;
@@ -304,77 +341,110 @@
         padding: 0 30px;
         font-size: 16px;
         font-weight: 500;
-        border-bottom: 2px solid rgba(0,0,0,0.2);
+        border-bottom: 2px solid rgba(0, 0, 0, 0.2);
         transition: all 0.3s ease;
     }
+
     .form-content .input-box input:focus,
-    .form-content .input-box input:valid{
-        border-color: #063970;
+    .form-content .input-box input:valid {
+        border-color: #d02f47;
     }
-    .form-content .input-box i{
+
+    .form-content .input-box i {
         position: absolute;
-        color: #063970;
+        color: #d02f47;
         font-size: 17px;
+        padding-left: 5px;
     }
-    .forms .form-content .text{
+
+    .forms .form-content .text {
         font-size: 14px;
         font-weight: 500;
         color: #333;
     }
-    .forms .form-content .text a{
+
+    .forms .form-content .text a {
         text-decoration: none;
     }
-    .forms .form-content .text a:hover{
+
+    .forms .form-content .text a:hover {
         text-decoration: underline;
     }
-    .forms .form-content .button{
+
+    .forms .form-content .button {
         color: #fff;
         margin-top: 40px;
     }
-    .forms .form-content .button input{
+
+    .forms .form-content .button input {
         color: #fff;
-        background: #063970;
+        background: #d02f47;
         border-radius: 6px;
         padding: 0;
         cursor: pointer;
         transition: all 0.4s ease;
     }
-    .forms .form-content .button input:hover{
-        background: #050e6b;
+
+    .forms .form-content .button input:hover {
+        background: #c73349;
     }
-    .forms .form-content label{
-        color: #063970;
+
+    .forms .form-content label, .forms .form-content label a {
+        color: #d02f47;
         cursor: pointer;
     }
-    .forms .form-content label:hover{
+
+    .forms .form-content label:hover, .forms .form-content label a:hover {
         text-decoration: underline;
-        color: #050e6b;
+        color: #c73349;
     }
+
     .forms .form-content .login-text,
-    .forms .form-content .sign-up-text{
+    .forms .form-content .sign-up-text {
         text-align: center;
         margin-top: 25px;
     }
-    .container #flip{
+
+    .forms .form-content span.invalid-feedback {
+        /* position: absolute; */
+        font-size: 0.8em;
+        color: #d02f47;
+
+        /* top: -5px;*/
+    }
+
+    .container #flip {
         display: none;
     }
+
     @media (max-width: 730px) {
-        .container .cover{
+        .container .cover {
             display: none;
         }
+
         .form-content .login-form,
-        .form-content .signup-form{
+        .form-content .signup-form {
             width: 100%;
         }
-        .form-content .signup-form{
+
+        .form-content .signup-form {
             display: none;
         }
-        .container #flip:checked ~ .forms .signup-form{
+
+        .container #flip:checked ~ .forms .signup-form {
             display: block;
         }
-        .container #flip:checked ~ .forms .login-form{
+
+        .container #flip:checked ~ .forms .login-form {
             display: none;
         }
     }
 
+    .mt-0 {
+        margin-top: 0 !important;
+    }
+
+    .mt-5 {
+        margin-top: 5px !important;
+    }
 </style>
