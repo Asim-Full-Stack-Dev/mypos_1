@@ -464,7 +464,7 @@
     <meta name="description" content=""/>
     <meta name="author" content=""/>
     <!-- title -->
-    <title>POS{{-- -title--}}</title>
+    <title>{{ config('app.name') }}{{-- -title--}}</title>
     <!-- fevicon -->
     <link rel="icon" href="{{ asset('/home_page/asset/images/pos-logo-icon.png') }}" type="image/png"/>
     <!-- bootstrap css -->
@@ -668,9 +668,9 @@
                                     @if (Route::has('login'))
                                         <li><a href="{{ asset('/login') }}">Login</a></li>
                                     @endif
-                                    @if (Route::has('register'))
-                                        <li><a href="{{ asset('/login') }}">Login</a></li>
-                                    @endif
+{{--                                    @if (Route::has('register'))--}}
+{{--                                        <li><a href="{{ asset('/login') }}">Login</a></li>--}}
+{{--                                    @endif--}}
                                 @else
                                     <li><a href="{{ asset('/dashboard') }}">Dashboard</a></li>
                                 @endguest
@@ -723,8 +723,9 @@
                     </div>
                     <div class="cont_info">
                         <p>
-                            <a href="https://html.design/cdn-cgi/l/email-protection#10797e767f5074757d7f7d71797c3e737f7d"><span
-                                    class="__cf_email__" data-cfemail="abe2c5cdc4ebcfcec6c4c6cac2c785c8c4c6">[email&#160;protected]</span></a>
+                            <a href="mailto:info@pos.com">info@pos.com</a>
+{{--                            <a href="https://html.design/cdn-cgi/l/email-protection#10797e767f5074757d7f7d71797c3e737f7d"><span--}}
+{{--                                    class="__cf_email__" data-cfemail="abe2c5cdc4ebcfcec6c4c6cac2c785c8c4c6">[email&#160;protected]</span></a>--}}
                         </p>
                     </div>
                 </div>
@@ -776,9 +777,9 @@
                         @if (Route::has('login'))
                             <li><a href="{{ asset('/login') }}">Login</a></li>
                         @endif
-                        @if (Route::has('register'))
-                            <li><a href="{{ asset('/login') }}">Login</a></li>
-                        @endif
+{{--                        @if (Route::has('register'))--}}
+{{--                            <li><a href="{{ asset('/login') }}">Login</a></li>--}}
+{{--                        @endif--}}
                     @else
                         <li><a href="{{ asset('/dashboard') }}">Dashboard</a></li>
                     @endguest
@@ -791,7 +792,7 @@
                 </form>
             </div>
         </div>
-        <p class="footer-company-name">Copyright © 2019. All rights reserved.</p>
+        <p class="footer-company-name">{{config('app.name')}} - Copyright © 2022. All rights reserved.</p>
     </div>
 </div>
 <!-- end copyright section -->

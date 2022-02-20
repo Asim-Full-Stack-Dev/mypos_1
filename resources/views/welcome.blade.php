@@ -6,12 +6,9 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="top_section_cont full text_align_center white_fonts">
-                        <h2>Familiarize Your Advance Software</h2>
-                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
-                            laudantium,
-                            totam rem aperiam<br/>
-                            eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt
-                            explicabo.
+                        <h2>Micro and Small Businesses to digital world</h2>
+                        <p>Manage Better. Earn More.<br/>
+                            No credit card required. No commitment.
                         </p>
                         <ul>
                             <li><a class="btn main_bt" href="#">Download Now</a></li>
@@ -65,7 +62,7 @@
                 <div class="col-md-12">
                     <div class="main_heading">
                         <label>Features</label>
-                        <h2>Amazing Software</h2>
+                        <h2>Amazing Application</h2>
                     </div>
                 </div>
             </div>
@@ -92,8 +89,7 @@
                                         <h4><i class="fa fa-check-circle-o"></i> Free Support</h4>
                                     </div>
                                     <div class="feature_cont">
-                                        <p>Sed ut perspiciatis unde omnis iste natus error sit volupt atem
-                                            accusantium</p>
+                                        <p>Whether you are a starting online seller on social media or doing offline business through your physical store, we got your back.</p>
                                     </div>
                                 </div>
                             </div>
@@ -104,11 +100,10 @@
                             <div class="feature_blog">
                                 <div class="full">
                                     <div class="feature_head">
-                                        <h4><i class="fa fa-check-circle-o"></i> Highly Customizable</h4>
+                                        <h4><i class="fa fa-check-circle-o"></i> Easy Handling</h4>
                                     </div>
                                     <div class="feature_cont">
-                                        <p>Sed ut perspiciatis unde omnis iste natus error sit volupt atem
-                                            accusantium</p>
+                                        <p>We provive you Easy and Customize solution for your Store and Business.</p>
                                     </div>
                                 </div>
                             </div>
@@ -122,8 +117,7 @@
                                         <h4><i class="fa fa-check-circle-o"></i> Free Download</h4>
                                     </div>
                                     <div class="feature_cont">
-                                        <p>Sed ut perspiciatis unde omnis iste natus error sit volupt atem
-                                            accusantium</p>
+                                        <p>No credit card required. No commitment.</p>
                                     </div>
                                 </div>
                             </div>
@@ -137,8 +131,7 @@
                                         <h4><i class="fa fa-check-circle-o"></i> Quick Loading</h4>
                                     </div>
                                     <div class="feature_cont">
-                                        <p>Sed ut perspiciatis unde omnis iste natus error sit volupt atem
-                                            accusantium</p>
+                                        <p>It works offline and no internet needed.</p>
                                     </div>
                                 </div>
                             </div>
@@ -150,8 +143,8 @@
         </div>
     </section>
     <!-- end section -->
-    <!-- section -->
-    <section class="layout_padding light_silver border_top_layout" style="overflow-x: hidden;">
+    <!-- section hidden-->
+    <section class="layout_padding light_silver border_top_layout" style="overflow-x: hidden; display: none">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6">
@@ -234,32 +227,27 @@
                     <div class="row">
                         <div class="step_blog step_1">
                             <h4>Step 1</h4>
-                            <p class="step_head">Go Software Store</p>
-                            <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui bland itiis praesentium
-                                volup
+                            <p class="step_head">Go App Store</p>
+                            <p>{{config('app.name')}} is available on both App Store and Google Play.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 black-op-20">
+                    <div class="row">
+                        <div class="step_blog step_2">
+                            <h4>Step 2</h4>
+                            <p class="step_head">Download Free</p>
+                            <p>The app is free for download and free to use. No need to pay to get started.
                                 tatum</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3 black-op-10">
                     <div class="row">
-                        <div class="step_blog step_2">
-                            <h4>Step 2</h4>
-                            <p class="step_head">Create an Account</p>
-                            <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui bland itiis praesentium
-                                volup
-                                tatum</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3 black-op-20">
-                    <div class="row">
                         <div class="step_blog step_3">
                             <h4>Step 3</h4>
-                            <p class="step_head">Download Free Trial</p>
-                            <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui bland itiis praesentium
-                                volup
-                                tatum</p>
+                            <p class="step_head">Create an Account</p>
+                            <p>You can register your account, in order to access your dashboard system.</p>
                         </div>
                     </div>
                 </div>
@@ -268,9 +256,7 @@
                         <div class="step_blog step_4">
                             <h4>Step 4</h4>
                             <p class="step_head">Enjoy &amp; Rate us!</p>
-                            <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui bland itiis praesentium
-                                volup
-                                tatum</p>
+                            <p>We appreciate your valuable feedback and remarks.</p>
                         </div>
                     </div>
                 </div>
@@ -339,23 +325,23 @@
                 <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
                     <div class="counter_blog">
                         <div class="center">
-                            <div class="counter_icon"><i class="fa fa-smile-o"></i></div>
+                            <div class="counter_icon"><i class="fa fa-users"></i></div>
                         </div>
                         <div class="center">
-                            <p class="counter-heading">Happy Customers</p>
+                            <p class="counter-heading">Total Customers</p>
                         </div>
-                        <h5 class="counter-count" data-count="563">0</h5>
+                        <h5 class="counter-count" data-count="563">0%</h5>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
                     <div class="counter_blog">
                         <div class="center">
-                            <div class="counter_icon"><i class="fa fa-users"></i></div>
+                            <div class="counter_icon"><i class="fa fa-smile-o"></i></div>
                         </div>
                         <div class="center">
-                            <p class="counter-heading">Return Customers</p>
+                            <p class="counter-heading">Happy Customers</p>
                         </div>
-                        <h5 class="counter-count" data-count="98">0%</h5>
+                        <h5 class="counter-count" data-count="500">0</h5>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
@@ -490,7 +476,7 @@
                         </div>
                         <div class="blog_cont">
                             <h6>18 September 2018</h6>
-                            <h3>Best sofware for your every business and admin control..</h3>
+                            <h3>Best application for your every business and admin control..</h3>
                             <div class="readmore_bt"><a href="#">Read More &gt;</a></div>
                         </div>
                     </div>
@@ -502,7 +488,7 @@
                         </div>
                         <div class="blog_cont">
                             <h6>18 September 2018</h6>
-                            <h3>Best sofware for your every business and admin control..</h3>
+                            <h3>Best application for your every business and admin control..</h3>
                             <div class="readmore_bt"><a href="#">Read More &gt;</a></div>
                         </div>
                     </div>

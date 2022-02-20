@@ -32,12 +32,12 @@ class HomeController extends Controller
     {
         //add condition if store already exist
 
-        return view('home');
-    }
-    public function create()
-    {
         return view('add_store');
     }
+//    public function create()
+//    {
+//        return view('add_store');
+//    }
     public function store(Request $request)
     {
         $stores = new Store();

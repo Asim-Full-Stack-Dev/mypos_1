@@ -68,5 +68,29 @@ class StockController extends Controller
         $stocks->delete();
         return redirect()->back()->with('status','Stocks Deleted Succesfully');
     }
+
+    public function getStock()
+    {
+        return response()->json(Stock::all(), 200);
+    }
+
+    public function stock(Request $request)
+    {
+        $stocks = new Stock();
+        $stocks->total_item = $request->input('total_item');
+        $stocks->total_price = $request->input('total_price');
+        $stocks->deposit = $request->input('deposit');
+        $stocks->balance = $request->input('balance');
+        $stocks->vendor = $request->input('vendor');
+        
+        $result = $stocks->save();
+        if($result){
+            return["result"=>"Stock Added Successfully"];
+        } else  {
+            return["result"=>"Stock are not Added"];
+        }
+        return response()->json($stocks);
+
+    }
     
 }

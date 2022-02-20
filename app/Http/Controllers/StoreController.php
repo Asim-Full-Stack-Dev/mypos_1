@@ -74,4 +74,34 @@ class StoreController extends Controller
         $stores->delete();
         return redirect()->back()->with('status','Store Deleted Succesfully');
     }
+
+    public function getStore()
+    {
+        return response()->json(Store::all(), 200);
+    }
+
+    public function addstore(Request $request)
+    {
+        $stores = new Store();
+        $stores->name = $request->input('name');
+        $stores->store_location = $request->input('store_location');
+        $stores->postal_code = $request->input('postal_code');
+        $stores->country = $request->input('country');
+        $stores->service = $request->input('service');
+        $stores->currency = $request->input('currency');
+        $stores->website = $request->input('website');
+        $stores->facebook = $request->input('facebook');
+        $stores->insta = $request->input('insta');
+        $stores->youtube = $request->input('youtube');
+        $stores->google = $request->input('google');
+        $stores->linkedin = $request->input('linkedin');
+        $result = $stores->save();
+        if($result){
+            return["result"=>"Store Added Successfully"];
+        } else  {
+            return["result"=>"Store are not Added"];
+        }
+        return response()->json($stores);
+
+    }
 }

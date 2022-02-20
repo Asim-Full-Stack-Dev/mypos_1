@@ -4,3 +4,30 @@
 -------------------------------------------------------------------*/
 
 /** ADD YOUR AWESOME CODES HERE **/
+
+/*body scroll*/
+body::-webkit-scrollbar {
+    /*width: .7em;*/
+    width: 15px;
+}
+
+body::-webkit-scrollbar-track {
+    /*box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.9);*/
+    /*background-color: #000;*/
+    /*border-radius: 100vh;*/
+    background: #24252c;
+}
+
+body::-webkit-scrollbar-thumb {
+    /*background-color: #F9B35E;*/
+    /*outline: 1px solid #b82223;*/
+    /*border-radius: 5px;*/
+    background: #d02f47;
+    /*border-radius: 100vh;*/
+    /*border: 3px solid #F9B35E;*/
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background: #e52946;
+    /*border: 3px solid #FFA537;*/
+}

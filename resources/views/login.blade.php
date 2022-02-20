@@ -155,8 +155,7 @@
                 </div>
 
                 <div class="button input-box">
-                    <input type="submit" value="Register">
-                    {{ __('Register') }}
+                    <input type="submit" value="{{ __('Register') }}">
                 </div>
                 <div class="text sign-up-text">Already have an account? <label for="flip">Login now</label></div>
                 <div class="text sign-up-text mt-5">Go back to <label><a href="{{'/'}}">Home</a></label></div>
@@ -189,7 +188,7 @@
         padding: 30px;
         background-size: cover;
         background-position: center center;
-        margin-bottom: 335px;
+        margin-bottom: 5rem;
         padding-top: 114px;
     }
 
@@ -352,7 +351,7 @@
 
     .form-content .input-box i {
         position: absolute;
-        color: #d02f47;
+        color: #333333;
         font-size: 17px;
         padding-left: 5px;
     }
@@ -379,7 +378,7 @@
     .forms .form-content .button input {
         color: #fff;
         background: #d02f47;
-        border-radius: 6px;
+        border-radius: 50px;
         padding: 0;
         cursor: pointer;
         transition: all 0.4s ease;
@@ -390,13 +389,15 @@
     }
 
     .forms .form-content label, .forms .form-content label a {
-        color: #d02f47;
+        color: #4f7eee;
         cursor: pointer;
+        text-decoration: none;
     }
 
     .forms .form-content label:hover, .forms .form-content label a:hover {
         text-decoration: underline;
-        color: #c73349;
+        color: #3c73f5;
+        text-decoration: none;
     }
 
     .forms .form-content .login-text,
@@ -447,4 +448,32 @@
     .mt-5 {
         margin-top: 5px !important;
     }
+
+    /*body scroll*/
+    body::-webkit-scrollbar {
+        /*width: .7em;*/
+        width: 15px;
+    }
+
+    body::-webkit-scrollbar-track {
+        /*box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.9);*/
+        /*background-color: #000;*/
+        /*border-radius: 100vh;*/
+        background: #24252c;
+    }
+
+    body::-webkit-scrollbar-thumb {
+        /*background-color: #F9B35E;*/
+        /*outline: 1px solid #b82223;*/
+        /*border-radius: 5px;*/
+        background: #d02f47;
+        /*border-radius: 100vh;*/
+        /*border: 3px solid #F9B35E;*/
+    }
+
+    body::-webkit-scrollbar-thumb:hover {
+        background: #e52946;
+        /*border: 3px solid #FFA537;*/
+    }
+
 </style>
