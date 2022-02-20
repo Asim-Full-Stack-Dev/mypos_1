@@ -1,4 +1,6 @@
 @extends('layouts.home_layout')
+@section('title', 'Home')
+@section('home', 'active')
 @section('content')
     <!-- section -->
     <div class="section top_main_section minus_layout">

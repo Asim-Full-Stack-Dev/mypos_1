@@ -1,13 +1,24 @@
 <?php
 
-namespace App\Http\Controllers;
-use App\Models\Purchase;
-use Illuminate\Support\Facades\File;
+namespace App\Http\Controllers\User;
 
+use App\Http\Controllers\Controller;
+use App\Models\Purchase;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
 
 class PurchaseController extends Controller
 {
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function index()
     {
         return view('add_purchase');
@@ -86,13 +97,15 @@ class PurchaseController extends Controller
         $purchases = Purchase::find($id);
         $destination = 'uploads/purchase/'.$purchases->image;
         if(File::exists($destination))
-            {
-                File::delete($destination);
-            }
-            $purchases->delete();
+        {
+            File::delete($destination);
+        }
+        $purchases->delete();
 
         return redirect()->back()->with('status','Purchase Deleted Succesfully');
     }
+
+    #region api actions
 
     public function getPurchase()
     {
@@ -126,7 +139,6 @@ class PurchaseController extends Controller
         return response()->json($purchases);
 
     }
+
+    #endregion
 }
-
-
-

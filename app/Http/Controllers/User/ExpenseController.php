@@ -1,13 +1,24 @@
 <?php
 
-namespace App\Http\Controllers;
-use App\Models\ExpenseTracker;
-use Illuminate\Support\Facades\File;
+namespace App\Http\Controllers\User;
 
+use App\Http\Controllers\Controller;
+use App\Models\ExpenseTracker;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
 
 class ExpenseController extends Controller
 {
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function add_expense()
     {
         return view('add_expense');
@@ -18,7 +29,6 @@ class ExpenseController extends Controller
         return view('add_expense');
     }
 
-
     public function store(Request $request)
     {
         $expense_trackers = new ExpenseTracker();
@@ -26,12 +36,11 @@ class ExpenseController extends Controller
         $expense_trackers->amount = $request->input('amount');
         $expense_trackers->date = $request->input('date');
         $expense_trackers->note = $request->input('note');
-        
+
         $expense_trackers->save();
 
         return redirect()->back()->with('status','Expense Tracker Added Succesfully');
     }
-
 
     public function expense_list()
     {
@@ -52,7 +61,7 @@ class ExpenseController extends Controller
         $expense_trackers->amount = $request->input('amount');
         $expense_trackers->date = $request->input('date');
         $expense_trackers->note = $request->input('note');
-        
+
         $expense_trackers->update();
         return redirect()->back()->with('status','Expense Tracker Updated Succesfully');
     }
@@ -64,6 +73,7 @@ class ExpenseController extends Controller
         return redirect()->back()->with('status','Expense Tracker Deleted Succesfully');
     }
 
+    #region api actions
 
     public function getExpense()
     {
@@ -87,4 +97,6 @@ class ExpenseController extends Controller
         return response()->json($expense_trackers);
 
     }
+    #endregion
+
 }

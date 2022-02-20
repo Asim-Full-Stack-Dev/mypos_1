@@ -464,7 +464,7 @@
     <meta name="description" content=""/>
     <meta name="author" content=""/>
     <!-- title -->
-    <title>{{ config('app.name') }}{{-- -title--}}</title>
+    <title>{{ config('app.name') }} - @yield('title')</title>
     <!-- fevicon -->
     <link rel="icon" href="{{ asset('/home_page/asset/images/pos-logo-icon.png') }}" type="image/png"/>
     <!-- bootstrap css -->
@@ -631,8 +631,8 @@
                     <div class="menu_side">
                         <div id="navbar_menu">
                             <ul class="first-ul">
-                                <li class="active"><a href="#">Home</a></li>
-                                <li><a href="#">About us</a></li>
+                                <li class="@yield('home')"><a href="index">Home</a></li>
+                                <li class="@yield('about')"><a href="about">About us</a></li>
                                 {{--                                <li>--}}
                                 {{--                                    <a href="#">Pages</a>--}}
                                 {{--                                    <ul>--}}
@@ -662,8 +662,8 @@
                                 {{--                                        <li><a href="blog_detail.html">Blog Detail</a></li>--}}
                                 {{--                                    </ul>--}}
                                 {{--                                </li>--}}
-                                <li><a href="#">Contact</a></li>
-
+                                <li class="@yield('service')"><a href="services">Service</a></li>
+                                <li class="@yield('contact')"><a href="contact">Contact</a></li>
                                 @guest
                                     @if (Route::has('login'))
                                         <li><a href="{{ asset('/login') }}">Login</a></li>
@@ -767,12 +767,13 @@
         <div class="footer-distributed">
             <div class="footer-left">
                 <ul class="footer-links">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About us</a></li>
+                    <li><a href="index">Home</a></li>
+                    <li><a href="about">About us</a></li>
                     {{--                    <li><a href="services.html">Services</a></li>--}}
                     {{--                    <li><a href="team.html">Our Team</a></li>--}}
                     {{--                    <li><a href="clients.html">Clients</a></li>--}}
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="services">Service</a></li>
+                    <li><a href="contact">Contact</a></li>
                     @guest
                         @if (Route::has('login'))
                             <li><a href="{{ asset('/login') }}">Login</a></li>
@@ -810,6 +811,7 @@
 <!-- custom jss -->
 <script src="{{ asset('/home_page/asset/js/custom.js') }}"></script>
 
+@yield('scripts')
 
 {{--<script type='text/javascript' style='display:none;' async>--}}
 {{--    __ez.queue.addFile('/detroitchicago/edmonton.webp', '/detroitchicago/edmonton.webp?a=a&cb=0&shcb=34', true, ['/detroitchicago/minneapolis.js'], true, false, false, false);--}}

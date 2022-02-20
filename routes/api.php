@@ -24,28 +24,26 @@ use App\Http\Controllers\API\AuthController;
 // });
 
 
-
-Route::post('/register', [AuthController::class,'register']);
-Route::post('/login', [AuthController::class,'login']);
+Route::post('/register', [AuthController::class, 'register']);
+Route::post('/login', [AuthController::class, 'login']);
 
 
 Route::middleware(['auth:sanctum'])->group(function () {
 
     Route::post('logout', [AuthController::class, 'logout']);
 
-    
 
 });
 
 
-Route::post('addstore','StoreController@addstore');
+Route::post('addstore', 'StoreController@addstore');
 Route::get('store', 'StoreController@getstore');
 
-Route::post('purchase','PurchaseController@purchase');
+Route::post('purchase', 'PurchaseController@purchase');
 Route::get('purchase', 'PurchaseController@getPurchase');
 
-Route::post('stock','StockController@stock');
+Route::post('stock', 'StockController@stock');
 Route::get('stock', 'StockController@getStock');
 
-Route::post('expense','ExpenseController@expense');
+Route::post('expense', 'ExpenseController@expense');
 Route::get('expense', 'ExpenseController@getExpense');

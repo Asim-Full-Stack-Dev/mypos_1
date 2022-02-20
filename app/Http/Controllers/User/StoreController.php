@@ -1,19 +1,28 @@
 <?php
 
-namespace App\Http\Controllers;
-use App\Models\Store;
-use Illuminate\Support\Facades\File;
+namespace App\Http\Controllers\User;
 
+use App\Http\Controllers\Controller;
+use App\Models\Store;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
 
 class StoreController extends Controller
 {
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function add_store()
     {
-        return view('add_store');
-    }
-    public function create()
-    {
+        //add condition if store already exist
+
         return view('add_store');
     }
     public function store(Request $request)
@@ -33,21 +42,21 @@ class StoreController extends Controller
         $stores->linkedin = $request->input('linkedin');
         $stores->save();
 
-        return redirect()->back()->with('status','Store Added Succesfully');
-    }
+//        return redirect()->with('status','Store Added Succesfully');
+        return redirect()->back()->with('status','Stores Added Succesfully');
 
+//        return redirect()->route('dashboard');
+    }
     public function store_list()
     {
         $stores = Store::all();
         return view('store_list', compact('stores'));
     }
-
     public function edit($id)
     {
         $stores = Store::find($id);
         return view('edit_store', compact('stores'));
     }
-
     public function update(Request $request, $id)
     {
         $stores = Store::find($id);
@@ -63,17 +72,18 @@ class StoreController extends Controller
         $stores->youtube = $request->input('youtube');
         $stores->google = $request->input('google');
         $stores->linkedin = $request->input('linkedin');
-        
+
         $stores->update();
         return redirect()->back()->with('status','Stores Updated Succesfully');
     }
-
     public function destroy($id)
     {
         $stores = Store::find($id);
         $stores->delete();
         return redirect()->back()->with('status','Store Deleted Succesfully');
     }
+
+    #region api Actions
 
     public function getStore()
     {
@@ -104,4 +114,7 @@ class StoreController extends Controller
         return response()->json($stores);
 
     }
+
+    #endregion
+
 }

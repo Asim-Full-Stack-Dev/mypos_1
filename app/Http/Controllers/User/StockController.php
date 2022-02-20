@@ -1,27 +1,34 @@
 <?php
 
-namespace App\Http\Controllers;
-use App\Models\Stock;
-use Illuminate\Support\Facades\File;
+namespace App\Http\Controllers\User;
 
+use App\Http\Controllers\Controller;
+use App\Models\Stock;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
 
 class StockController extends Controller
 {
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function add_stock()
     {
         return view('add_stock');
     }
-
 
     public function create()
     {
         return view('add_stock');
     }
 
-
-
-    
     public function store(Request $request)
     {
         $stocks = new Stock();
@@ -30,7 +37,7 @@ class StockController extends Controller
         $stocks->deposit = $request->input('deposit');
         $stocks->balance = $request->input('balance');
         $stocks->vendor = $request->input('vendor');
-        
+
         $stocks->save();
 
         return redirect()->back()->with('status','Stocks Added Succesfully');
@@ -57,17 +64,19 @@ class StockController extends Controller
         $stocks->deposit = $request->input('deposit');
         $stocks->balance = $request->input('balance');
         $stocks->vendor = $request->input('vendor');
-        
+
         $stocks->update();
         return redirect()->back()->with('status','Stocks Updated Succesfully');
     }
-       
+
     public function destroy($id)
     {
         $stocks = Stock::find($id);
         $stocks->delete();
         return redirect()->back()->with('status','Stocks Deleted Succesfully');
     }
+
+    #region api actions
 
     public function getStock()
     {
@@ -82,7 +91,7 @@ class StockController extends Controller
         $stocks->deposit = $request->input('deposit');
         $stocks->balance = $request->input('balance');
         $stocks->vendor = $request->input('vendor');
-        
+
         $result = $stocks->save();
         if($result){
             return["result"=>"Stock Added Successfully"];
@@ -92,5 +101,6 @@ class StockController extends Controller
         return response()->json($stocks);
 
     }
-    
+    #endregion
+
 }
