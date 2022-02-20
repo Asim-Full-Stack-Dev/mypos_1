@@ -2,10 +2,10 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ExpenseController;
-use App\Http\Controllers\PurchaseController;
-use App\Http\Controllers\StockController;
-use App\Http\Controllers\StoreController;
+use App\Http\Controllers\User\ExpenseController;
+use App\Http\Controllers\User\PurchaseController;
+use App\Http\Controllers\User\StockController;
+use App\Http\Controllers\User\StoreController;
 use App\Http\Controllers\API\AuthController;
 
 /*
@@ -31,19 +31,17 @@ Route::post('/login', [AuthController::class, 'login']);
 Route::middleware(['auth:sanctum'])->group(function () {
 
     Route::post('logout', [AuthController::class, 'logout']);
-
-
 });
 
 
-Route::post('addstore', 'StoreController@addstore');
-Route::get('store', 'StoreController@getstore');
+Route::get('store', [StoreController::class, 'getstore']);
+Route::post('addstore', [StoreController::class, 'addstore']);
 
-Route::post('purchase', 'PurchaseController@purchase');
-Route::get('purchase', 'PurchaseController@getPurchase');
+Route::get('purchase', [PurchaseController::class, 'getPurchase']);
+Route::post('purchase', [PurchaseController::class, 'purchase']);
 
-Route::post('stock', 'StockController@stock');
-Route::get('stock', 'StockController@getStock');
+Route::get('stock', [StockController::class, 'getStock']);
+Route::post('stock', [StockController::class, 'stock']);
 
-Route::post('expense', 'ExpenseController@expense');
-Route::get('expense', 'ExpenseController@getExpense');
+Route::get('expense', [ExpenseController::class, 'getExpense']);
+Route::post('expense', [ExpenseController::class, 'expense']);

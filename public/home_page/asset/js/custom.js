@@ -199,7 +199,7 @@ $(document).ready(function() {
              ]
     });
 
-        var image = '/home_page/asset/images/marker.png';
+        var image = '/home_page/asset/images/marker-red.png';
         var beachMarker = new google.maps.Marker({
           position: {lat: 40.645037, lng: -73.880224},
           map: map,
