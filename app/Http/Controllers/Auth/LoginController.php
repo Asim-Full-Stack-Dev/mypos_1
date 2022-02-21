@@ -41,6 +41,6 @@ class LoginController extends Controller
     //redirect to dashboard or if store is not exist, then redirect to add store page
     protected function redirectTo()
     {
-        return RouteServiceProvider::DASHBOARD;
+        return RouteServiceProvider::STORE;
     }
 }

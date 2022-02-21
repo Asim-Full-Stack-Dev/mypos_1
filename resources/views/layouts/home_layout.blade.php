@@ -672,7 +672,7 @@
 {{--                                        <li><a href="{{ asset('/login') }}">Login</a></li>--}}
 {{--                                    @endif--}}
                                 @else
-                                    <li><a href="{{ asset('/dashboard') }}">Dashboard</a></li>
+                                    <li><a href="{{ route('store_dashboard') }}">Store</a></li>
                                 @endguest
                             </ul>
                         </div>
@@ -782,7 +782,7 @@
 {{--                            <li><a href="{{ asset('/login') }}">Login</a></li>--}}
 {{--                        @endif--}}
                     @else
-                        <li><a href="{{ asset('/dashboard') }}">Dashboard</a></li>
+                        <li><a href="{{ route('store_dashboard') }}">Store</a></li>
                     @endguest
                 </ul>
             </div>

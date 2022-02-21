@@ -2,10 +2,10 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\User\ExpenseController;
-use App\Http\Controllers\User\PurchaseController;
-use App\Http\Controllers\User\StockController;
-use App\Http\Controllers\User\StoreController;
+use App\Http\Controllers\Store\ExpenseController;
+use App\Http\Controllers\Store\PurchaseController;
+use App\Http\Controllers\Store\StockController;
+use App\Http\Controllers\Store\StoreController;
 use App\Http\Controllers\API\AuthController;
 
 /*
