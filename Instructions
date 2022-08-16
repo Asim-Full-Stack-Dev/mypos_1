@@ -1,0 +1,53 @@
+Laravel Basics:
+
+Version	8
+php.
+Composer.
+Laravel.
+
+Where we write HTMl			resources 	-> 	views
+			   Model		app			->	Models	
+			   Controller	app			->	Http	->	Controllers	
+			   Routing		routes
+			   File Store	storage
+			   Config		config
+			   Database		database
+			   
+	app - 	Model
+			Controller
+			Middleware
+			End level configuration
+		
+			Console		-	Kernel.php	(Custom Commands)
+			Exceptions	-	Handler.php
+			Http 		-	Controllers
+							Middleware
+							Models
+							
+	config		-	database	(connection)	
+					session
+					email
+						
+	vendor		-	packages
+	
+	env			-	credentials
+
+	server.php	-	rewrite functionality
+			
+		
+PHP Artisan Commands:
+	php artisan serve
+	php artisan make:controller UsersController
+	php artisan make:component Header
+	
+
+Laravel Database Strategy:
+	1- Map Database table with Class Name	[DB table = plural , Model Name = Singular]
+	2- Define database structure.
+	3- Write business logic.
+	
+Laravel Add migration/ Add new table using code:
+	1- make new migration. [php artisan make:migration create_products_table --create=products]
+	2- update schema/ migration file.
+	3- run migrate. [php artisan migrate --path=database/migrations/2022_02_22_193512_create_products_table.php]
+	
